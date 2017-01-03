@@ -3,17 +3,24 @@
 <head><% include partials/template/head.ejs %></head>
 <body>
     <% include partials/template/header.ejs %>
-    <div class="mainwrapper">
-        <% if(title == "Login") { %>
-            <% include partials/content/login.ejs %>
-        <% } %>
-        <% if(title == "Register") { %>
-            <% include partials/content/register.ejs %>
-        <% } %>
+    <% if(title == "Login") { %>
+        <% include partials/content/login.ejs %>
+    <% } %>
+    <% if(title == "Register") { %>
+        <% include partials/content/register.ejs %>
+    <% } else { %>
+        <div class="mainwrapper">
+        <% include partials/content/home_menu.ejs %>
         <% if(title == "Home") { %>
             <% include partials/content/home.ejs %>
         <% } %>
-    </div>
+        <% if(title == "Inventory") { %>
+            <% include partials/content/inventory.ejs %>
+        <% } %>
+        </div>
+    <% } %>
+
+
     <% include partials/template/footer.ejs %>
     <% include partials/template/jsdefaults.ejs %>
 </body>

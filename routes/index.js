@@ -28,6 +28,10 @@ router.get('/Home', function(req, res, next) {
   res.render('index', { title: 'Home', user: session });
 });
 
+router.get('/Inventory', function(req, res, next) {
+  res.render('index', { title: 'Inventory', user: session });
+});
+
 router.post('/Login/Checking', function(req, res){
     var email = req.body.email;
     var password = req.body.password;
