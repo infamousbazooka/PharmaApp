@@ -1,0 +1,17 @@
+<div class="main right">
+    <div class="land-small card teal">
+        <div class="center white-text">
+            <h4>INVENTORY</h4>
+        </div>
+    </div>
+    <div class="tray grey darken-4 center">
+        <a href="/Inventory/Edit" class="waves-effect waves-light btn">Edit Inventory</a>
+        <a class="waves-effect waves-light btn">View Inventory</a>
+    </div>
+
+<% if(typeof(sub) !== undefined) { %>
+    <% if(sub == "Edit") { %>
+        <% include partials/content/inventory_edit.ejs %>
+    <% } %>
+<% } %>
+</div>

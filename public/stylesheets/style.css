@@ -36,3 +36,16 @@ body{
 .background img{
     width: 100%;
 }
+
+
+
+.land-small{
+    padding: 1em 0;
+    margin: 0;
+}
+.tray{
+    padding: 1em;
+}
+.tray a{
+    margin: 0 1em;
+}
