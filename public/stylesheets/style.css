@@ -1,8 +1,38 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*{
+    font-family: 'Montserrat', sans-serif !important;
 }
-
-a {
-  color: #00B7FF;
+.nav-wrapper{
+    padding-left: 15px;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.no_margin{
+    margin: 0;
+}
+.mgt{
+    margin-top: 2em;
+}
+.mainwrapper{
+    flex: 1 0 auto;
+}
+.land{
+    padding: 3em 0;
+}
+.logger{
+    position: relative;
+    top: -2em;
+}
+.login_title{
+    padding: 2em;
+    color: #fafafa;
+}
+.login_body{
+    padding: 1em;
+}
+.background img{
+    width: 100%;
 }

@@ -4,6 +4,12 @@
 <body>
     <% include partials/template/header.ejs %>
     <div class="mainwrapper">
+        <% if(title == "Login") { %>
+            <% include partials/content/login.ejs %>
+        <% } %>
+        <% if(title == "Register") { %>
+            <% include partials/content/register.ejs %>
+        <% } %>
         <% if(title == "Home") { %>
             <% include partials/content/home.ejs %>
         <% } %>
