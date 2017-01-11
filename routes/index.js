@@ -5,11 +5,12 @@ var express = require('express'),
     methodOverride = require('method-override'); //used to manipulate POST
 
 var session = {};
-var User = require('../models/users')
+var User = require('../models/users');
+var Bill = require('../models/bill');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Login' });
+  res.render('index', { title: 'Login', status: "F" });
 });
 
 router.get('/Login', function(req, res, next) {
@@ -29,10 +30,14 @@ router.get('/Home', function(req, res, next) {
 });
 
 router.get('/Inventory', function(req, res, next) {
-  res.render('index', { title: 'Inventory', user: session });
+  res.render('index', { title: 'Inventory', user: session, sub: "root" });
 });
 
-router.get('/Inventory', function(req, res, next) {
+router.get('/Billing', function(req, res, next) {
+  res.render('index', { title: 'Billing', date: getCurrentDate() });
+});
+
+router.get('/Inventory/Edit', function(req, res, next) {
   res.render('index', { title: 'Inventory', user: session, sub: "Edit" });
 });
 
@@ -71,6 +76,18 @@ router.post('/Register/Saving', function(req, res){
     });
 });
 
+function getCurrentDate(){
+    var date = new Date();
 
+    var year = date.getFullYear();
+
+    var month = date.getMonth() + 1;
+    month = (month < 10 ? "0" : "") + month;
+
+    var day  = date.getDate();
+    day = (day < 10 ? "0" : "") + day;
+
+    return day + "/" + month + "/" + year;
+}
 
 module.exports = router;

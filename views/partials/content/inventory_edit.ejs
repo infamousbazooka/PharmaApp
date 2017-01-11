@@ -1,0 +1,86 @@
+<div class="row grey darken-4">
+    <div class="col s12">
+        <ul class="tabs">
+            <li class="tab col s3"><a class="active" href="#add">ADD</a></li>
+            <li class="tab col s3"><a href="#update">UPDATE</a></li>
+            <li class="tab col s3"><a href="#delete">REMOVE</a></li>
+        </ul>
+    </div>
+</div>
+<div class="in_edit mgt">
+    <div class="row">
+        <div class="col m3"></div>
+        <div class="col m6">
+            <div class="row">
+                <div id="add" class="col s12">
+                    <div class="card no_margin login_body">
+                        <div class="row">
+                            <form class="col s12" method="POST" action="/Login/Checking">
+                                <div class="row no_margin">
+                                    <h6></h6>
+                                    <div class="input-field col s12">
+                                        <input id="name" required type="text" name="name" class="validate">
+                                        <label for="name">Medicine Name</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <input id="batchnum" required type="number" name="batchnum" class="validate">
+                                        <label for="batchnum">Batch Number</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <input id="expirydate" required type="date" name="expirydate" class="datepicker">
+                                        <label for="expirydate">Expiry Date</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <input id="mfgdate" required type="date" name="mfgdate" class="datepicker">
+                                        <label for="mfgdate">Manufacturing Date</label>
+                                    </div>
+                                    <div class="col s12">
+                                        <p class="center">
+                                            <input type="submit" class="waves-effect waves-light btn grey darken-4" value="Submit"/>
+                                            <input type="reset" class="waves-effect waves-light btn red darken-4" value="Clear"/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="update" class="col s12">
+                    <div class="card no_margin login_body">
+                        <div class="row">
+                            <form class="col s12" method="POST" action="/Login/Checking">
+                                <div class="row no_margin">
+                                    <h6></h6>
+                                    <div class="input-field col s12">
+                                        <input id="name" required type="text" name="name" class="validate">
+                                        <label for="name">Medicine Name</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <input id="batchnum" required type="number" name="batchnum" class="validate">
+                                        <label for="batchnum">Batch Number</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <input id="expirydate" required type="date" name="expirydate" class="datepicker">
+                                        <label for="expirydate">Expiry Date</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <input id="mfgdate" required type="date" name="mfgdate" class="datepicker">
+                                        <label for="mfgdate">Manufacturing Date</label>
+                                    </div>
+                                    <div class="col s12">
+                                        <p class="center">
+                                            <input type="submit" class="waves-effect waves-light btn grey darken-4" value="Submit"/>
+                                            <input type="reset" class="waves-effect waves-light btn red darken-4" value="Clear"/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="delete" class="col s12">Test 3</div>
+            </div>
+        </div>
+        <div class="col m3"></div>
+    </div>
+</div>

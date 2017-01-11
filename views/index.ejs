@@ -5,18 +5,19 @@
     <% include partials/template/header.ejs %>
     <% if(title == "Login") { %>
         <% include partials/content/login.ejs %>
-    <% } %>
-    <% if(title == "Register") { %>
+    <% } else if(title == "Register") { %>
         <% include partials/content/register.ejs %>
+    <% } else if(title == "Billing") { %>
+        <% include partials/content/billing.ejs %>
     <% } else { %>
         <div class="mainwrapper">
-        <% include partials/content/home_menu.ejs %>
-        <% if(title == "Home") { %>
-            <% include partials/content/home.ejs %>
-        <% } %>
-        <% if(title == "Inventory") { %>
-            <% include partials/content/inventory.ejs %>
-        <% } %>
+            <% include partials/content/home_menu.ejs %>
+            <% if(title == "Home") { %>
+                <% include partials/content/home.ejs %>
+            <% } %>
+            <% if(title == "Inventory") { %>
+                <% include partials/content/inventory.ejs %>
+            <% } %>
         </div>
     <% } %>
     <% include partials/template/footer.ejs %>

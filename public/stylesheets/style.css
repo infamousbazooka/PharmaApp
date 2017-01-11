@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 *{
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Montserrat', sans-serif;
 }
 .nav-wrapper{
     padding-left: 15px;
@@ -48,4 +48,20 @@ body{
 }
 .tray a{
     margin: 0 1em;
+}
+
+
+
+.lister{
+    position: absolute;
+    right: 2em;
+    top: 2em;
+}
+.sckr{
+    overflow-y: scroll;
+    height: 200px;
+}
+.sckr thead{
+    background-color: #222d2f;
+    color: #fafafa;
 }
