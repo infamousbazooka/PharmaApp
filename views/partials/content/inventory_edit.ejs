@@ -15,9 +15,8 @@
                 <div id="add" class="col s12">
                     <div class="card no_margin login_body">
                         <div class="row">
-                            <form class="col s12" method="POST" action="/Login/Checking">
+                            <form class="col s12" method="POST" action="/AddMed">
                                 <div class="row no_margin">
-                                    <h6></h6>
                                     <div class="input-field col s12">
                                         <input id="name" required type="text" name="name" class="validate">
                                         <label for="name">Medicine Name</label>
@@ -27,12 +26,20 @@
                                         <label for="batchnum">Batch Number</label>
                                     </div>
                                     <div class="input-field col s12">
-                                        <input id="expirydate" required type="date" name="expirydate" class="datepicker">
-                                        <label for="expirydate">Expiry Date</label>
-                                    </div>
-                                    <div class="input-field col s12">
                                         <input id="mfgdate" required type="date" name="mfgdate" class="datepicker">
                                         <label for="mfgdate">Manufacturing Date</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <input id="expirydate" required type="date" name="expdate" class="datepicker">
+                                        <label for="expirydate">Expiry Date</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input id="rate" required type="number" name="rate" class="validate">
+                                        <label for="rate">Rate</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input id="quantity" required type="number" name="quantity" class="validate">
+                                        <label for="quantity">Quantity</label>
                                     </div>
                                     <div class="col s12">
                                         <p class="center">
@@ -48,28 +55,35 @@
                 <div id="update" class="col s12">
                     <div class="card no_margin login_body">
                         <div class="row">
-                            <form class="col s12" method="POST" action="/Login/Checking">
+                            <form id="updateForm" class="col s12" method="POST" action="/UpdateMed">
                                 <div class="row no_margin">
-                                    <h6></h6>
                                     <div class="input-field col s12">
-                                        <input id="name" required type="text" name="name" class="validate">
-                                        <label for="name">Medicine Name</label>
+                                        <input id="updateBox" required type="text" name="name" class="validate">
+                                        <label class="active" for="updateBox">Medicine Name</label>
                                     </div>
                                     <div class="input-field col s12">
                                         <input id="batchnum" required type="number" name="batchnum" class="validate">
                                         <label for="batchnum">Batch Number</label>
                                     </div>
                                     <div class="input-field col s12">
-                                        <input id="expirydate" required type="date" name="expirydate" class="datepicker">
-                                        <label for="expirydate">Expiry Date</label>
-                                    </div>
-                                    <div class="input-field col s12">
                                         <input id="mfgdate" required type="date" name="mfgdate" class="datepicker">
                                         <label for="mfgdate">Manufacturing Date</label>
                                     </div>
+                                    <div class="input-field col s12">
+                                        <input id="expirydate" required type="date" name="expdate" class="datepicker">
+                                        <label for="expirydate">Expiry Date</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input id="rate" required type="number" name="rate" class="validate">
+                                        <label for="rate">Rate</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input id="quantity" required type="number" name="quantity" class="validate">
+                                        <label for="quantity">Quantity</label>
+                                    </div>
                                     <div class="col s12">
                                         <p class="center">
-                                            <input type="submit" class="waves-effect waves-light btn grey darken-4" value="Submit"/>
+                                            <input type="submit" class="waves-effect waves-light btn grey darken-4" value="Update"/>
                                             <input type="reset" class="waves-effect waves-light btn red darken-4" value="Clear"/>
                                         </p>
                                     </div>
@@ -78,7 +92,27 @@
                         </div>
                     </div>
                 </div>
-                <div id="delete" class="col s12">Test 3</div>
+                <div id="delete" class="col s12">
+                    <div class="card no_margin login_body">
+                        <div class="row">
+                            <form id="deleteForm" class="col s12" method="POST" action="/DeleteMed">
+                                <div class="row no_margin">
+                                    <div class="input-field col s12">
+                                        <h6>Medicine Name</h6>
+                                        <input id="searchBox" required type="text" name="searchBox" class="validate">
+                                    </div>
+                                    <div class="display"></div>
+                                    <div class="col s12">
+                                        <p class="center">
+                                            <input type="submit" class="waves-effect waves-light btn grey darken-4" value="Delete"/>
+                                            <input type="reset" class="waves-effect waves-light btn red darken-4" value="Clear"/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col m3"></div>

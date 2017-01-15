@@ -16,6 +16,19 @@ body{
 .mgt{
     margin-top: 2em;
 }
+.awesomplete{
+    width: 100%;
+}
+.awesomplete ul{
+    z-index: 9999;
+}
+@media all {
+ .page-break  { display: none; }
+}
+
+@media print {
+ .page-break  { display: block; page-break-before: always; }
+}
 .mainwrapper{
     flex: 1 0 auto;
 }
@@ -58,10 +71,18 @@ body{
     top: 2em;
 }
 .sckr{
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 200px;
 }
 .sckr thead{
     background-color: #222d2f;
     color: #fafafa;
+}
+
+input[type=number][readonly="readonly"], input[type=text][readonly="readonly"], input[type=text][readonly="readonly"]+label, input[type=number][readonly="readonly"]+label{
+    color: #26a69a;
+}
+input[type=number][readonly="readonly"], input[type=text][readonly="readonly"]{
+    border-bottom: 1px solid #26a69a;
+    box-shadow: 0 1px 0 0 #26a69a;
 }

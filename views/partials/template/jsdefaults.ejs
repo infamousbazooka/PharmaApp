@@ -1,3 +1,10 @@
 <script src="/javascripts/jquery.min.js"></script>
 <script src="/javascripts/materialize.min.js"></script>
+<script src="/javascripts/awesomplete.min.js"></script>
 <script src="/javascripts/main.js"></script>
+<% if(title == "Inventory") { %>
+    <script src="/javascripts/edit.js"></script>
+<% } %>
+<% if(title == "Billing") { %>
+    <script src="/javascripts/billing.js"></script>
+<% } %>

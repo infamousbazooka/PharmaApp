@@ -4,7 +4,8 @@ var billSchema = new mongoose.Schema({
   patient: String,
   invoice: String,
   doctor: String,
-  supplies: Array
+  supplies: Array,
+  netTotal: Number
 });
 var Bill = mongoose.model('Bill', billSchema);
 module.exports = Bill;

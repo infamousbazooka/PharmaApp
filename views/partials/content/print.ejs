@@ -1,0 +1,34 @@
+<table>
+    <thead>
+        <tr>
+            <th>SR. NO.</th>
+            <th>Name of Product</th>
+            <th>Batch</th>
+            <th>Expiry</th>
+            <th>QTY</th>
+            <th>RATE</th>
+            <th>VAT%</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% var count = 0; %>
+        <% bill.supplies.forEach(function(elem){ %>
+            <tr>
+                <td><%= ++count %></td>
+                <td><%= elem.DESCRIPTION %></td>
+                <td><%= elem.BATCH %></td>
+                <td><%= elem.EXP %></td>
+                <td><%= elem.QTY %></td>
+                <td><%= elem.RATE %></td>
+                <td><%= elem.TAXP %></td>
+                <td><%= elem.AMT %></td>
+            </tr>
+
+            <!-- page-break -->
+            <% if(count%6 == 0) { %>
+                <div class="page-break"></div>
+            <% } %>
+        <% }); %>
+    </tbody>
+</table>

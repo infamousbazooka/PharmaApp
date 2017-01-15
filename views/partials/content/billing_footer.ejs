@@ -2,70 +2,74 @@
     <div class="row">
         <div class="col s8">
             <div class="row white-text">
-                <div class="input-field col s4">
-                    <input id="itemid" required type="text" name="itemid" class="validate">
-                    <label for="itemid">Item ID</label>
-                </div>
-                <div class="input-field col s8">
-                    <input id="itemname" required type="text" name="itemname" class="validate">
-                    <label for="itemname">Item Name</label>
-                </div>
-                <div class="input-field col s4">
-                    <input id="batch" required type="text" name="batch" class="validate">
-                    <label for="batch">Batch</label>
-                </div>
-                <div class="input-field col s4">
-                    <input id="exp" required type="text" name="exp" class="validate">
-                    <label for="exp">Expiry</label>
-                </div>
-                <div class="input-field col s4">
-                    <input id="qty" required type="number" name="qty" class="validate">
-                    <label for="qty">Quantity</label>
-                </div>
-                <div class="input-field col s2">
-                    <input id="mrp" required type="number" name="mrp" class="validate">
-                    <label for="mrp">MRP</label>
-                </div>
-                <div class="input-field col s2">
-                    <input id="disc" required type="number" name="disc" class="validate">
-                    <label for="disc">Discount</label>
-                </div>
-                <div class="input-field col s3">
-                    <input id="rate" required type="number" name="rate" class="validate">
-                    <label for="rate">Rate</label>
-                </div>
-                <div class="input-field col s3">
-                    <input id="amt" required type="number" name="amt" class="validate">
-                    <label for="amt">Amount</label>
-                </div>
-                <div class="input-field col s2">
-                    <input id="tax" required type="number" name="tax" class="validate">
-                    <label for="tax">TAX %</label>
-                </div>
+                <form id="footerForm" method="post">
+                    <div class="input-field col s4">
+                        <input id="itemid" required readonly="readonly" type="text" name="itemid" class="validate">
+                        <label for="itemid">Item ID</label>
+                    </div>
+                    <div class="input-field col s8">
+                        <input id="itemname" required readonly="readonly" type="text" name="itemname" class="validate">
+                        <label for="itemname">Item Name</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input id="batch" required readonly="readonly" type="text" name="batch" class="validate">
+                        <label for="batch">Batch</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input id="exp" required readonly="readonly" type="text" name="exp" class="validate">
+                        <label for="exp">Expiry</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input id="qty" required type="number" min=1 oninput="validity.valid||(value='');" name="qty" class="validate">
+                        <label for="qty">Quantity</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <input id="mrp" required readonly="readonly" type="number" name="mrp" class="validate">
+                        <label for="mrp">MRP</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <input id="disc" required type="number" name="disc" class="validate">
+                        <label for="disc">Discount</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="rate" required type="number" readonly="readonly" name="rate" class="validate">
+                        <label for="rate">Rate</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="amt" required readonly="readonly" type="number" name="amt" class="validate">
+                        <label for="amt">Amount</label>
+                    </div>
+                    <div class="input-field col s2">
+                        <input id="tax" required type="number" name="tax" class="validate">
+                        <label for="tax">TAX %</label>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="col s4 grey darken-3">
             <div class="row white-text">
-                <div class="input-field col s6">
-                    <input id="total" required type="number" name="total" class="validate">
-                    <label for="total">Total</label>
-                </div>
-                <div class="input-field col s6">
-                    <input id="tax" required type="number" name="tax" class="validate">
-                    <label for="tax">Tax</label>
-                </div>
-                <div class="input-field col s6">
-                    <input id="discount" required type="number" name="discount" class="validate">
-                    <label for="discount">Disc</label>
-                </div>
-                <div class="input-field col s12">
-                    <input id="net" required type="number" name="net" class="validate">
-                    <label for="net">Net Total</label>
-                </div>
+                <form id="totalForm" method="post">
+                    <div class="input-field col s6">
+                        <input id="total" required readonly="readonly" type="number" name="total" class="validate">
+                        <label for="total">Total</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="taxp" required readonly="readonly" type="number" readonly="readonly" name="tax" class="validate">
+                        <label for="taxp">Tax</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="discount" required type="number" name="discount" class="validate">
+                        <label for="discount">Disc</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="net" required readonly="readonly" type="number" name="net" class="validate">
+                        <label for="net">Net Total</label>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="col s12 mgt">
-            <input type="submit" class="waves-effect waves-light btn right" value="Print"/>
+            <input type="button" id="printBtn" class="waves-effect waves-light btn right" value="Print"/>
         </div>
     </div>
     <div class="footer-copyright grey darken-4">

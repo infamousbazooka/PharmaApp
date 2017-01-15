@@ -1,278 +1,73 @@
-<div class="row">
-    <div class="col s9">
-        <div class="row mainwrapper mgt">
-            <form class="col s12" method="POST" action="/Login/Checking">
-                <div class="row no_margin">
+<div>
+    <div class="row mainwrapper mgt">
+        <form class="col s12" method="POST" action="/Login/Checking">
+            <div class="row no_margin">
+                <form id="topForm">
                     <div class="input-field col s4">
                         <input id="date" required type="text" name="date" value="<%= date %>" class="validate">
                         <label for="date">Date</label>
                     </div>
                     <div class="input-field col s7">
                         <input id="patientname" required type="text" name="patientname" class="validate">
-                        <label for="patientname">Patient Name</label>
+                        <label class="active" for="patientname">Patient Name</label>
                     </div>
                     <div class="input-field col s4">
-                        <input id="invoice" required type="text" name="invoice" class="validate">
-                        <label for="invoice">Invoice No.</label>
+                        <input id="invoice" required type="text" readonly="readonly" value="<%= invoice %>" name="invoice" class="validate">
+                        <label class="active" for="invoice">Invoice No.</label>
                     </div>
                     <div class="input-field col s8">
                         <input id="doctorname" required type="text" name="doctorname" class="validate">
-                        <label for="doctorname">Doctor Name</label>
+                        <label class="active" for="doctorname">Doctor Name</label>
                     </div>
                     <div class="input-field col s12">
                         <input id="searchmain" required type="text" name="searchmain" class="validate">
-                        <label for="searchmain">Search</label>
+                        <label class="active" for="searchmain">Search</label>
                     </div>
-                    <div class="col s12 sckr">
-                        <table class="bordered">
-                            <thead>
-                                <tr>
-                                    <th data-field="id">Item ID</th>
-                                    <th data-field="name">Item Name</th>
-                                    <th data-field="price">BATCH</th>
-                                    <th data-field="price">EXP</th>
-                                    <th data-field="price">QTY</th>
-                                    <th data-field="price">MRP</th>
-                                    <th data-field="price">DISC</th>
-                                    <th data-field="price">RATE</th>
-                                    <th data-field="price">AMT</th>
-                                    <th data-field="price">TAX%</th>
-                                    <th data-field="price">TAX</th>
-                                </tr>
-                            </thead>
-                            <tbody class="tbody">
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                                <tr>
-                                    <td>Alvin</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>kcnsdkfn</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                    <td>Eclair</td>
-                                    <td>$0.87</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                </form>
+                <div class="col s12 sckr">
+                    <table class="bordered">
+                        <thead>
+                            <tr>
+                                <th data-field="id">ID</th>
+                                <th data-field="name">DESCRIPTION</th>
+                                <th data-field="price">BATCH</th>
+                                <th data-field="price">EXP</th>
+                                <th data-field="price">QTY</th>
+                                <th data-field="price">MRP</th>
+                                <th data-field="price">DISC</th>
+                                <th data-field="price">RATE</th>
+                                <th data-field="price">AMT</th>
+                                <th data-field="price">TAX%</th>
+                                <th data-field="price">TAX</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody" id="tableBody">
+                        </tbody>
+                    </table>
                 </div>
-            </form>
-        </div>
-        <% include billing_footer.ejs %>
+            </div>
+        </form>
     </div>
-    <div class="col s3">
-        <ul id="slide-out-right" class="side-nav-right fixed row">
-            <li class="subheader col s12">Search List</li>
-            <li class="mgt">
-                <div class="input-field col s12">
-                    <input id="searchbox" required type="text" name="searchbox" class="validate">
-                </div>
-            </li>
-            <li class="col s12">
-                <ul class="collection">
-                    <li class="collection-item">Alvin</li>
-                    <li class="collection-item">Alvin</li>
-                    <li class="collection-item">Alvin</li>
-                    <li class="collection-item">Alvin</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+    <% include billing_footer.ejs %>
+    <%# <ul id="slide-out-right" class="side-nav-right row">
+        <li class="subheader col s12">Search List</li>
+        <li class="mgt">
+            <div class="input-field col s12">
+                <input id="searchbox" required type="text" name="searchbox" class="validate">
+            </div>
+        </li>
+        <li class="col s12">
+            <ul class="collection">
+                <li class="collection-item">Alvin</li>
+                <li class="collection-item">Alvin</li>
+                <li class="collection-item">Alvin</li>
+                <li class="collection-item">Alvin</li>
+            </ul>
+        </li>
+    </ul>%>
 </div>
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById("patientname").focus();
+    };
+</script>

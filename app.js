@@ -8,7 +8,8 @@ var index = require('./routes/index');
 
 // Mongo Stuff
 var db = require('./models/db'),
-    users = require('./models/users');
+    users = require('./models/users'),
+    medicine = require('./models/medicine');
 
 var app = express();
 
@@ -16,7 +17,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(logger('dev'));
+// app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
