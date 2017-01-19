@@ -150,3 +150,24 @@ $('#printBtn').click(function(){
         });
     }
 });
+
+$('#qty').on('change', function(event) {
+    var qty = $('#qty').val();
+    var id = $('#itemid').val();
+    $.ajax('/GetQuantity', {
+        type: "POST",
+        data: { id: id, qty: qty },
+        success: function(data){
+            if (data !== "Cool") {
+                $('#qty').val(data);
+                Materialize.toast('Inventory exhausted!', 4000);
+            }
+        }
+    });
+});
+
+$(document).on("keyup keydown", function(e) {
+    if (e.which == 120) {
+        $('#printBtn').click();
+    }
+});

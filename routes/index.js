@@ -36,6 +36,19 @@ router.get('/Inventory', function(req, res, next) {
   res.render('index', { title: 'Inventory', user: session, sub: "root" });
 });
 
+router.get('/Report', function(req, res, next) {
+  res.render('index', { title: 'Report', user: session, sub: "root" });
+});
+
+router.get('/Report/:billId?', function(req, res, next) {
+  var billId = req.params.billId;
+  Bill.findById(billId, function(err, bill) {
+    if (err) throw err;
+    bill = JSON.parse(JSON.stringify(bill).replace('TAX%', "TAXP"));
+    res.render('index', { title: 'Bill Report', user: session, sub: "root", bill: bill });
+  });
+});
+
 router.get('/Billing', function(req, res, next) {
   var invoice = 0;
   Bill.find({}, function(err, bills) {
@@ -85,6 +98,32 @@ router.get('/DoctorList', function(req, res){
       doctors.push(bill.doctor);
     });
     res.send(doctors);
+  });
+});
+
+router.post('/GetBills', function(req, res){
+  var mydate = new Date(req.body.date);
+  var month = mydate.getMonth() + 1;
+  if (month < 10) {
+    month = "0" + month;
+  }
+  var cdate = mydate.getDate() + "/" + month + "/" + mydate.getFullYear();
+  Bill.find({ date: cdate }, function(err, users) {
+    if (err) throw err;
+    res.send(users);
+  });
+});
+
+router.post('/GetQuantity', function(req, res){
+  var id = req.body.id;
+  var qty = req.body.qty;
+  Medicine.findById(id, function(err, med) {
+    if (err) throw err;
+    if (med.qty < qty) {
+      res.send(med.qty + "");
+    } else {
+      res.send("Cool");
+    }
   });
 });
 

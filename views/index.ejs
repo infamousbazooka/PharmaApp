@@ -18,6 +18,12 @@
             <% if(title == "Inventory") { %>
                 <% include partials/content/inventory.ejs %>
             <% } %>
+            <% if(title == "Report") { %>
+                <% include partials/content/report.ejs %>
+            <% } %>
+            <% if(title == "Bill Report") { %>
+                <% include partials/content/bill.ejs %>
+            <% } %>
         </div>
     <% } %>
     <% include partials/template/footer.ejs %>

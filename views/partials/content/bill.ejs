@@ -1,0 +1,43 @@
+<div class="main right grey darken-3">
+    <div class="land-small card teal">
+        <div class="center white-text">
+            <h4>Bill Report</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="s12 mgt">
+            <div class="row">
+                <div class="col s2"></div>
+                <div class="col s8 card">
+                    <div class="row mgt">
+                        <div class="col s12">
+                            <h5>Date: <%= bill.date %></h5>
+                            <h5>Doctor: <%= bill.doctor %></h5>
+                            <h5>Patient: <%= bill.patient %></h5>
+                            <div class="row">
+                                <h5>Supplies: </h5>
+                                <div class="col s1"></div>
+                                <div class="col s11">
+                                    <% for(i = 0; i < bill.supplies.length; i++) { %>
+                                        <h6>Description: <%= bill.supplies[i].DESCRIPTION %></h6>
+                                        <h6>Batch: <%= bill.supplies[i].BATCH %></h6>
+                                        <h6>Expiry Date: <%= bill.supplies[i].EXP %></h6>
+                                        <h6>Quantity: <%= bill.supplies[i].QTY %></h6>
+                                        <h6>MRP: <%= bill.supplies[i].MRP %></h6>
+                                        <h6>Discount: <%= bill.supplies[i].DISC %></h6>
+                                        <h6>Rate: <%= bill.supplies[i].RATE %></h6>
+                                        <h6>Amount: <%= bill.supplies[i].AMT %></h6>
+                                        <h6>TAX%: <%= bill.supplies[i].TAXP %></h6>
+                                        <h6>TAX: <%= bill.supplies[i].TAX %></h6>
+                                        <hr>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s2"></div>
+            </div>
+        </div>
+    </div>
+</div>
